@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Route Weather</title>
+</head>
+<body>
+
+    <h1>Route Weather</h1>
+    <form method="post">
+        <label for="latitude_start">Start Latitude:</label><br>
+        <input type="text" id="latitude_start" name="latitude_start"><br><br>
+        <label for="longitude_start">Start Longitude:</label><br>
+        <input type="text" id="longitude_start" name="longitude_start"><br><br>
+        <label for="latitude_finish">Finish Latitude:</label><br>
+        <input type="text" id="latitude_finish" name="latitude_finish"><br><br>
+        <label for="longitude_finish">Finish Longitude:</label><br>
+        <input type="text" id="longitude_finish" name="longitude_finish"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if start_weather %}
+    <p>{{ start_weather }}</p>
+    {% endif %}
+    {% if end_weather %}
+    <p>{{ end_weather }}</p>
+    {% endif %}
+</body>
+</html>
+
